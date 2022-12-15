@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    overflow-y: visible;
+    background-size: cover;
+    background-image: linear-gradient(90deg, blue , violet);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 6%;
+    margin-bottom: 3%;
+}
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+form input {
+    font-size: x-large;
+    padding: 7px;
+    width: 400px;
+    height: 40px;
+    border: none;
+    border-radius: 15px;
+    
+}
+
+button {
+    background-color: inherit;
+    font-size: x-large;
+    margin: 5px;
+    cursor: pointer;
+    transition:all 0.3s ease;
+    border: none;
+}
+
+button :hover {
+    color: white;
+}
+
+.todo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.todo-list {
+    min-width:30%;
+    list-style: none;
+    
+}
+.todo-item {
+    padding: 7px;
+    background-color: aliceblue;
+    border-radius: 15px;
+}
+.todo {
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    display: flex;
+}
+
+.todo-complete :hover {
+    color:green;
+}
+.todo-delete :hover {
+    color: red;
+}
+
+.todo li {
+    flex: 1;
+}
+
+.fa-trash, .fa-check {
+    pointer-events: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+.completed .todo-item {
+    background-color: inherit;
+    transition: 0.5s;
+}
+.sideswipe {
+    transform: translatex(10rem);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+}
+
+.select {
+     margin: 1rem;
+     position: relative;
+     overflow: hidden;
+     
+}
+
+select {
+    font-size: large;
+    padding: 3px;
+    width: 10rem;
+    height: 1.5rem;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.select::after {
+    content: "\25bc";
+    position: absolute;
+    background-image: inherit;
+    top: 0;
+    right: 0;
+    padding: 0.3rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.select:hover::after {
+    
+    background: black;
+    color: white;
+}
+
+
+@media (max-width: 880px) {
+    
+    form {
+        width: 80%;
+        margin: 40px;
+        flex-direction: column;
+    }
+    form input {
+        width: 80%;
+    }
+    select {
+        width: 200px;
+        font-size: x-large;
+        height: 100%;
+        padding-left: 10px;
+    }
+    
+    .select::after {
+        height: 100%;
+    }
+}
